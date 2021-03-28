@@ -1,0 +1,200 @@
+:root{
+	--black:#1F1F1F;
+	--darkgrey:#666;
+	--grey:grey;
+	--purple:#A100FF;
+	--blue:#008CBA;
+	--white:#fff;
+}
+/*Fonts*/
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v8/Yq6R-LCAWCX3-6Ky7FAFrO96kigt.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v8/Yq6R-LCAWCX3-6Ky7FAFrOF6kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v7/jizMREVItHgc8qDIbSTKq4XkRiUawTk7f45UM9y05oZ8RODER-Zn1g.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/librefranklin/v7/jizMREVItHgc8qDIbSTKq4XkRiUawTk7f45UM9y05oZ8RODFR-Zn1g.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+html{
+	scroll-behavior: smooth;
+	letter-spacing: 1px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 62.5%; 
+	/* =10px */
+}
+/* Establece el tamaño base 
+en 10px lo que facilita 
+la conversión */
+* {box-sizing:border-box}
+body {
+  font-size: 1.6rem; 
+  /* =16px */
+  color: var(--grey);
+}
+h1 {
+  font-size: 3.8rem;
+  color: var(--black);
+}
+h2 {
+  font-size: 2.4rem; 
+  color: var(--black);
+}
+h3 {
+  font-size: 2.0rem; 
+  color: var(--black);
+  font-family: 'Fjalla One', sans-serif;
+}
+h4 {
+  font-size: 1.8rem; 
+  color: var(--black);
+}
+
+/*nav-logo*/
+.nav{
+	margin: 15px 40px;
+	padding-bottom: 100px;
+}
+.logo img{
+	width:	15%;
+	height: 15%;
+	float: left;
+}
+
+.menu{
+	float: right;
+	overflow: hidden;
+	font-family: 'Fjalla One', sans-serif;
+}
+.menu a{
+	text-decoration: none;
+	color: var(--black);
+	letter-spacing: 1px;
+	float: left;
+  	display: block;
+  	text-align: center;
+  	padding: 10px 10px;
+}
+.menu a:hover{
+	cursor: pointer;
+}
+
+/*articles*/
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 15px 35px;
+}
+.column{
+	flex: 50%;
+	padding: 20px;
+}
+.column img{
+	width: 60%;
+	float: left;
+	padding: 15px;
+}
+.button{
+	color: var(--white);
+	background-color: var(--black);
+	text-decoration: none;
+	padding: 5px 15px;
+}
+.button:hover{
+	background-color: var(--grey);
+}
+.banner{
+	background-image: url(images/banner.jpg);
+	margin:0;
+  	background-repeat: no-repeat;
+  	background-size: 100%;
+}
+.banner h1{
+	text-align: left;
+	padding: 10% 70% 0% 5%;
+	color: var(--white);
+}
+.banner p{
+	text-align: left;
+	padding:0 80% 10% 5%;
+	color: var(--white);
+}
+.btn{
+	margin: 5px;
+	padding: 15px 30px;
+}
+
+.adopt{
+	margin: 15px 40px 150px 40px;
+}
+.adopt article img{
+	width: 40%;
+	float: left;
+	padding-right: 50px;
+}
+.adopt article p{
+	margin: 0px 200px;
+}
+.cleafix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+footer{
+	background-color: var(--black);
+	color: var(--white);
+	margin: 0px;
+	padding: 25px 0px;
+	text-align: center;
+}
+footer h3{
+	color: var(--white);
+}
+.fab{
+	background-color: white;
+	color: var(--black);
+	padding: 15px;
+	border-radius: 50px;
+}
+/*On screens that are 992px wide or less*/
+@media screen and (max-width: 600px){
+	.row{
+		flex-direction: column;
+	}
+	.column img{
+	width: 100%;
+	float: none;
+	}
+	.adopt article img{
+	width: 110%;
+	float: none;
+	padding-right: 50px;
+	}
+	.adopt article p{
+	margin: 0px 10px;
+	}
+}
